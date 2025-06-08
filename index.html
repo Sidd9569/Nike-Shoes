@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nike Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="15.jpg" alt="Nike Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shoes">Shoes</a></li>
+        <li><a href="#men">Men</a></li>
+        <li><a href="#women">Women</a></li>
+        <li><a href="#sports">Sports</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>
+        JUST <span class="red">DO IT</span>
+        <span class="logo-inline"><img src="15.jpg" alt="Nike Logo" /></span>
+      </h1>
+      <p>Discover the latest Nike innovations, designed to help athletes reach their potential. Performance and style for every athlete.</p>
+      <div class="buttons">
+        <a href="#" class="btn-red">Shop Now</a>
+        <a href="#" class="btn-outline">Explore</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shoes -->
+  <section class="products" id="shoes">
+    <h2>Shoes Collection</h2>
+    <div class="product-category">
+      <div class="product-card">
+        <img src="1.webp" alt="Nike Shoe 1">
+        <p>$129.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="2.jpg" alt="Nike Shoe 2">
+        <p>$109.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="3.jpg" alt="Nike Shoe 3">
+        <p>$139.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Men -->
+  <section class="products" id="men">
+    <h2>Men</h2>
+    <div class="product-category">
+      <div class="product-card">
+        <img src="4.webp" alt="Nike Men 1">
+        <p>$99.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="3.jpg" alt="Nike Men 2">
+        <p>$129.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="2.jpg" alt="Nike Men 3">
+        <p>$109.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Women -->
+  <section class="products" id="women">
+    <h2>Women</h2>
+    <div class="product-category">
+      <div class="product-card">
+        <img src="5.webp" alt="Nike Women 1">
+        <p>$119.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="6.jpg" alt="Nike Women 2">
+        <p>$89.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="7.avif" alt="Nike Women 3">
+        <p>$109.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sports -->
+  <section class="products" id="sports">
+    <h2>Sports</h2>
+    <div class="product-category">
+      <div class="product-card">
+        <img src="8.avif" alt="Nike Sports 1">
+        <p>$149.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="9.jpg" alt="Nike Sports 2">
+        <p>$134.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="10.avif" alt="Nike Sports 3">
+        <p>$119.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured -->
+  <section class="products" id="featured">
+    <h2>Featured Collection</h2>
+    <div class="product-category">
+      <div class="product-card">
+        <img src="12.gif" alt="Featured 1">
+        <p>$159.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="14.gif" alt="Featured 2">
+        <p>$179.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="13.gif" alt="Featured 3">
+        <p>$169.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <p><strong>Q: How long does delivery take?</strong><br>A: Delivery usually takes 3-5 business days.</p>
+      <p><strong>Q: Can I return or exchange items?</strong><br>A: Yes, returns and exchanges are accepted within 30 days.</p>
+      <p><strong>Q: Are Nike shoes under warranty?</strong><br>A: Yes, all products come with a standard 1-year warranty.</p>
+    </div>
+  </section>
+
+  <!-- Cart Summary -->
+  <div id="cart-summary">
+    <div id="cart-summary-content">
+      <p><span id="cart-count">0</span> item(s) - Total: $<span id="cart-total-value">0.00</span></p>
+      <div>
+        <button id="view-cart">View Cart</button>
+        <button id="buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal">
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+    <div id="cart-total"></div>
+    <button id="close-cart">Close</button>
+  </div>
+
+  <!-- Footer -->
+  <footer style="background-color: #000; color: #888; text-align: center; padding: 1.5rem 1rem; font-size: 0.9rem;">
+    <p>&copy; 2025 Nike Landing Page Clone. This is a non-commercial, educational or personal project.</p>
+    <p>Nike, the Swoosh design, and "Just Do It" are trademarks of Nike, Inc. This site is not affiliated with or endorsed by Nike.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const cart = [];
+    const cartSummary = document.getElementById("cart-summary");
+    const cartTotalValue = document.getElementById("cart-total-value");
+    const cartCount = document.getElementById("cart-count");
+    const cartItemsContainer = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+    const cartModal = document.getElementById("cart-modal");
+
+    document.querySelectorAll(".product-card button").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const card = btn.closest(".product-card");
+        const price = parseFloat(card.querySelector("p").textContent.replace("$", ""));
+        const image = card.querySelector("img").src;
+        cart.push({ price, image });
+        updateCartUI();
+      });
+    });
+
+    function updateCartUI() {
+      cartSummary.style.display = "block";
+      cartCount.textContent = cart.length;
+      const total = cart.reduce((sum, item) => sum + item.price, 0).toFixed(2);
+      cartTotalValue.textContent = total;
+
+      cartItemsContainer.innerHTML = "";
+      cart.forEach((item, i) => {
+        const p = document.createElement("p");
+        p.textContent = `Item ${i + 1}: $${item.price.toFixed(2)}`;
+        cartItemsContainer.appendChild(p);
+      });
+      cartTotal.textContent = `Total: $${total}`;
+    }
+
+    document.getElementById("view-cart").addEventListener("click", () => {
+      cartModal.style.display = "block";
+    });
+
+    document.getElementById("close-cart").addEventListener("click", () => {
+      cartModal.style.display = "none";
+    });
+
+    document.getElementById("buy-btn").addEventListener("click", () => {
+      if (cart.length === 0) {
+        alert("Your cart is empty.");
+        return;
+      }
+      alert("Thank you for your purchase!");
+      cart.length = 0;
+      updateCartUI();
+      cartSummary.style.display = "none";
+      cartModal.style.display = "none";
+    });
+  </script>
+</body>
+</html>
