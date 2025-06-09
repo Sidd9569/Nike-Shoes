@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Receipt</title>
+  <style>
+    body { font-family: Arial; padding: 30px; }
+    .receipt { border: 1px solid #ccc; padding: 20px; max-width: 400px; margin: auto; }
+    img { max-width: 100%; }
+  </style>
+</head>
+<body>
+  <div class="receipt">
+    <h2>Receipt</h2>
+    <div id="product-info"></div>
+    <p>Thank you for your purchase!</p>
+  </div>
+
+  <script>
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (!isLoggedIn) {
+      window.location.href = "login.html";
+    } else {
+      const product = JSON.parse(localStorage.getItem("selectedProduct"));
+      if (product) {
+        document.getElementById("product-info").innerHTML = `
+          <img src="${product.image}" alt="Product Image" />
+          <p><strong>Price:</strong> $${product.price.toFixed(2)}</p>
+        `;
+      } else {
+        document.getElementById("product-info").innerHTML = "<p>No product selected.</p>";
+      }
+    }
+  </script>
+</body>
+</html>

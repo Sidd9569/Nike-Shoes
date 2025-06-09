@@ -5,8 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nike Landing Page</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      position: relative;
+    }
+    .modal-content .close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .modal-content input {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+    }
+    .view-cart-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      z-index: 999;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <div class="logo">
       <img src="15.jpg" alt="Nike Logo" />
@@ -39,216 +87,240 @@
     </div>
   </section>
 
-  <!-- Shoes -->
+  <!-- Product Sections -->
   <section class="products" id="shoes">
     <h2>Shoes Collection</h2>
     <div class="product-category">
-      <div class="product-card">
-        <img src="1.webp" alt="Nike Shoe 1">
-        <p>$129.99</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="2.jpg" alt="Nike Shoe 2">
-        <p>$109.99</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="3.jpg" alt="Nike Shoe 3">
-        <p>$139.99</p>
-        <button>Add to Cart</button>
-      </div>
+      <div class="product-card"><img src="1.webp" alt="Nike Shoe 1"><button class="add-to-cart" data-name="Nike Air Max" data-price="99.99" data-img="1.webp">Add to Cart</button></div>
+      <div class="product-card"><img src="2.jpg" alt="Nike Shoe 2"><button class="add-to-cart" data-name="Nike Revolution" data-price="79.99" data-img="2.jpg">Add to Cart</button></div>
+      <div class="product-card"><img src="3.jpg" alt="Nike Shoe 3"><button class="add-to-cart" data-name="Nike Zoom" data-price="89.99" data-img="3.jpg">Add to Cart</button></div>
     </div>
   </section>
 
-  <!-- Men -->
   <section class="products" id="men">
     <h2>Men</h2>
     <div class="product-category">
-      <div class="product-card">
-        <img src="4.webp" alt="Nike Men 1">
-        <p>$99.99</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="3.jpg" alt="Nike Men 2">
-        <p>$129.99</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="2.jpg" alt="Nike Men 3">
-        <p>$109.99</p>
-        <button>Add to Cart</button>
-      </div>
+      <div class="product-card"><img src="4.webp" alt="Nike Men 1"><button class="add-to-cart" data-name="Nike Men Classic" data-price="59.99" data-img="4.webp">Add to Cart</button></div>
+      <div class="product-card"><img src="3.jpg" alt="Nike Men 2"><button class="add-to-cart" data-name="Nike Men Sport" data-price="69.99" data-img="3.jpg">Add to Cart</button></div>
+      <div class="product-card"><img src="2.jpg" alt="Nike Men 3"><button class="add-to-cart" data-name="Nike Men Flex" data-price="64.99" data-img="2.jpg">Add to Cart</button></div>
     </div>
   </section>
 
-  <!-- Women -->
   <section class="products" id="women">
     <h2>Women</h2>
     <div class="product-category">
-      <div class="product-card">
-        <img src="5.webp" alt="Nike Women 1">
-        <p>$119.99</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="6.jpg" alt="Nike Women 2">
-        <p>$89.99</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="7.avif" alt="Nike Women 3">
-        <p>$109.99</p>
-        <button>Add to Cart</button>
-      </div>
+      <div class="product-card"><img src="5.webp" alt="Nike Women 1"><button class="add-to-cart" data-name="Nike Women Breeze" data-price="74.99" data-img="5.webp">Add to Cart</button></div>
+      <div class="product-card"><img src="6.jpg" alt="Nike Women 2"><button class="add-to-cart" data-name="Nike Women Run" data-price="89.99" data-img="6.jpg">Add to Cart</button></div>
+      <div class="product-card"><img src="7.avif" alt="Nike Women 3"><button class="add-to-cart" data-name="Nike Women Pulse" data-price="84.99" data-img="7.avif">Add to Cart</button></div>
     </div>
   </section>
 
-  <!-- Sports -->
   <section class="products" id="sports">
     <h2>Sports</h2>
     <div class="product-category">
-      <div class="product-card">
-        <img src="8.avif" alt="Nike Sports 1">
-        <p>$149.99</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="9.jpg" alt="Nike Sports 2">
-        <p>$134.99</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="10.avif" alt="Nike Sports 3">
-        <p>$119.99</p>
-        <button>Add to Cart</button>
-      </div>
+      <div class="product-card"><img src="8.avif" alt="Nike Sports 1"><button class="add-to-cart" data-name="Nike Sprint Pro" data-price="99.99" data-img="8.avif">Add to Cart</button></div>
+      <div class="product-card"><img src="9.jpg" alt="Nike Sports 2"><button class="add-to-cart" data-name="Nike JumpX" data-price="109.99" data-img="9.jpg">Add to Cart</button></div>
+      <div class="product-card"><img src="10.avif" alt="Nike Sports 3"><button class="add-to-cart" data-name="Nike Ultra Sports" data-price="119.99" data-img="10.avif">Add to Cart</button></div>
     </div>
   </section>
 
-  <!-- Featured -->
   <section class="products" id="featured">
     <h2>Featured Collection</h2>
     <div class="product-category">
-      <div class="product-card">
-        <img src="12.gif" alt="Featured 1">
-        <p>$159.99</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="14.gif" alt="Featured 2">
-        <p>$179.99</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="13.gif" alt="Featured 3">
-        <p>$169.99</p>
-        <button>Add to Cart</button>
-      </div>
+      <div class="product-card"><img src="12.gif" alt="Featured 1"><button class="add-to-cart" data-name="Nike Featured Air" data-price="139.99" data-img="12.gif">Add to Cart</button></div>
+      <div class="product-card"><img src="14.gif" alt="Featured 2"><button class="add-to-cart" data-name="Nike Storm Runner" data-price="129.99" data-img="14.gif">Add to Cart</button></div>
+      <div class="product-card"><img src="13.gif" alt="Featured 3"><button class="add-to-cart" data-name="Nike Blaze" data-price="149.99" data-img="13.gif">Add to Cart</button></div>
     </div>
   </section>
 
-  <!-- Contact -->
   <section class="contact" id="contact">
     <h2>Contact Us</h2>
     <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
       <textarea rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <!-- FAQ -->
   <section class="faq" id="faq">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
-      <p><strong>Q: How long does delivery take?</strong><br>A: Delivery usually takes 3-5 business days.</p>
+      <p><strong>Q: How long does delivery take?</strong><br>A: Delivery usually takes 3–5 business days.</p>
       <p><strong>Q: Can I return or exchange items?</strong><br>A: Yes, returns and exchanges are accepted within 30 days.</p>
       <p><strong>Q: Are Nike shoes under warranty?</strong><br>A: Yes, all products come with a standard 1-year warranty.</p>
     </div>
   </section>
 
-  <!-- Cart Summary -->
-  <div id="cart-summary">
-    <div id="cart-summary-content">
-      <p><span id="cart-count">0</span> item(s) - Total: $<span id="cart-total-value">0.00</span></p>
-      <div>
-        <button id="view-cart">View Cart</button>
-        <button id="buy-btn">Buy Now</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Cart Modal -->
-  <div id="cart-modal">
-    <h3>Your Cart</h3>
-    <div id="cart-items"></div>
-    <div id="cart-total"></div>
-    <button id="close-cart">Close</button>
-  </div>
-
-  <!-- Footer -->
   <footer style="background-color: #000; color: #888; text-align: center; padding: 1.5rem 1rem; font-size: 0.9rem;">
     <p>&copy; 2025 Nike Landing Page Clone. This is a non-commercial, educational or personal project.</p>
     <p>Nike, the Swoosh design, and "Just Do It" are trademarks of Nike, Inc. This site is not affiliated with or endorsed by Nike.</p>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Login Required</h2>
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div class="modal" id="cartModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCart()">&times;</span>
+      <h2>Your Cart</h2>
+      <div class="cart-items" id="cartItems"></div>
+      <p><strong>Total: $<span id="cartTotal">0</span></strong></p>
+      <button onclick="buyNow()">Buy Now</button>
+    </div>
+  </div>
+
+  <!-- Receipt Modal -->
+<div class="modal" id="receiptModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeReceipt()">&times;</span>
+    <h2>Purchase Receipt</h2>
+    <p><strong>Receipt ID:</strong> <span id="receiptId"></span></p>
+    <div id="receiptItems"></div>
+    <p><strong>Original Total:</strong> $<span id="originalTotal"></span></p>
+    <p><strong>Discount (10%):</strong> -$<span id="discountAmount"></span></p>
+    <p><strong>Final Total:</strong> $<span id="finalTotal"></span></p>
+  </div>
+</div>
+
+
+  <button class="view-cart-btn" onclick="viewCart()">View Cart</button>
+
   <script>
-    const cart = [];
-    const cartSummary = document.getElementById("cart-summary");
-    const cartTotalValue = document.getElementById("cart-total-value");
-    const cartCount = document.getElementById("cart-count");
-    const cartItemsContainer = document.getElementById("cart-items");
-    const cartTotal = document.getElementById("cart-total");
-    const cartModal = document.getElementById("cart-modal");
+    let isLoggedIn = false;
+    let cart = [];
 
-    document.querySelectorAll(".product-card button").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const card = btn.closest(".product-card");
-        const price = parseFloat(card.querySelector("p").textContent.replace("$", ""));
-        const image = card.querySelector("img").src;
-        cart.push({ price, image });
-        updateCartUI();
-      });
-    });
-
-    function updateCartUI() {
-      cartSummary.style.display = "block";
-      cartCount.textContent = cart.length;
-      const total = cart.reduce((sum, item) => sum + item.price, 0).toFixed(2);
-      cartTotalValue.textContent = total;
-
-      cartItemsContainer.innerHTML = "";
-      cart.forEach((item, i) => {
-        const p = document.createElement("p");
-        p.textContent = `Item ${i + 1}: $${item.price.toFixed(2)}`;
-        cartItemsContainer.appendChild(p);
-      });
-      cartTotal.textContent = `Total: $${total}`;
+    function closeModal() {
+      document.getElementById("loginModal").style.display = "none";
     }
 
-    document.getElementById("view-cart").addEventListener("click", () => {
-      cartModal.style.display = "block";
-    });
+    function closeCart() {
+      document.getElementById("cartModal").style.display = "none";
+    }
 
-    document.getElementById("close-cart").addEventListener("click", () => {
-      cartModal.style.display = "none";
-    });
+    function viewCart() {
+      document.getElementById("cartModal").style.display = "flex";
+      renderCart();
+    }
 
-    document.getElementById("buy-btn").addEventListener("click", () => {
-      if (cart.length === 0) {
-        alert("Your cart is empty.");
-        return;
+    function login() {
+      isLoggedIn = true;
+      closeModal();
+      alert("You are now logged in.");
+    }
+
+    function addToCart(name, price, imgSrc) {
+      const index = cart.findIndex(item => item.name === name);
+      if (index !== -1) {
+        cart[index].quantity += 1;
+      } else {
+        cart.push({ name, price: parseFloat(price), imgSrc, quantity: 1 });
       }
-      alert("Thank you for your purchase!");
-      cart.length = 0;
-      updateCartUI();
-      cartSummary.style.display = "none";
-      cartModal.style.display = "none";
+      alert("Item added to cart!");
+    }
+
+   function renderCart() {
+  const cartItems = document.getElementById("cartItems");
+  const cartTotal = document.getElementById("cartTotal");
+  cartItems.innerHTML = '';
+  let total = 0;
+
+  cart.forEach((item, i) => {
+    const subtotal = item.price * item.quantity;
+    total += subtotal;
+
+    cartItems.innerHTML += `
+      <div class="cart-item" style="display: flex; gap: 10px; align-items: center; margin-bottom: 10px;">
+        <img src="${item.imgSrc}" alt="${item.name}" width="60" style="border-radius: 5px;" />
+        <div style="flex-grow: 1;">
+          <p><strong>${item.name}</strong></p>
+          <p>Price: $${item.price.toFixed(2)}</p>
+          <p>Quantity: ${item.quantity}</p>
+          <p><strong>Subtotal: $${subtotal.toFixed(2)}</strong></p>
+        </div>
+        <button onclick="removeFromCart(${i})" style="background: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Remove</button>
+      </div>
+    `;
+  });
+
+  cartTotal.innerText = total.toFixed(2);
+}
+
+    
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      renderCart();
+    }
+
+function buyNow() {
+  if (cart.length === 0) {
+    alert("Your cart is empty!");
+    return;
+  }
+
+  // Generate random receipt ID
+  const receiptId = 'RCPT-' + Math.floor(Math.random() * 900000 + 100000);
+  document.getElementById('receiptId').innerText = receiptId;
+
+  // Calculate totals
+  let originalTotal = 0;
+  let receiptItemsHtml = '';
+
+  cart.forEach(item => {
+    const subtotal = item.price * item.quantity;
+    originalTotal += subtotal;
+    receiptItemsHtml += `
+      <p>
+        <strong>${item.name}</strong> - Quantity: ${item.quantity} - Price: $${item.price.toFixed(2)} - Subtotal: $${subtotal.toFixed(2)}
+      </p>
+    `;
+  });
+
+  const discount = originalTotal * 0.10;
+  const finalTotal = originalTotal - discount;
+
+  document.getElementById('receiptItems').innerHTML = receiptItemsHtml;
+  document.getElementById('originalTotal').innerText = originalTotal.toFixed(2);
+  document.getElementById('discountAmount').innerText = discount.toFixed(2);
+  document.getElementById('finalTotal').innerText = finalTotal.toFixed(2);
+
+  // Show receipt modal
+  document.getElementById('receiptModal').style.display = 'flex';
+
+  // Clear cart and close cart modal
+  cart = [];
+  closeCart();
+}
+
+function closeReceipt() {
+  document.getElementById('receiptModal').style.display = 'none';
+}
+
+
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+      button.addEventListener("click", function() {
+        if (!isLoggedIn) {
+          document.getElementById("loginModal").style.display = "flex";
+          return;
+        }
+        const name = this.dataset.name;
+        const price = this.dataset.price;
+        const img = this.dataset.img;
+        addToCart(name, price, img);
+      });
     });
   </script>
+
 </body>
 </html>
+
